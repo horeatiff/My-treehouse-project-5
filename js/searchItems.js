@@ -1,14 +1,12 @@
 function searchImg() {
-  let input = document.getElementById("search").value;
-  input = input.toLowerCase();
-  let x = document.getElementsByTagName("a");
+  const input = document.getElementById("search").toLowerCase();
+  const imageAnchor = document.getElementsByTagName("a");
 
-  for (let i = 0; i < x.length; i++) {
-    if (!x[i].innerHTML.toLowerCase().includes(input)) {
-      x[i].style.display = "none";
-      console.log(i);
+  for (let i = 0; i < imageAnchor.length; i++) {
+    if (!imageAnchor[i].innerHTML.toLowerCase().includes(input)) {
+      imageAnchor[i].style.display = "none";
     } else {
-      x[i].style.display = "block";
+      imageAnchor[i].style.display = "block";
     }
   }
 }
