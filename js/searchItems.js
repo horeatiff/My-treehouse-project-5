@@ -1,5 +1,5 @@
 function searchImg() {
-  const input = document.getElementById("search").value.toLowerCase();
+  const input = document.getElementById("search").value?.toLowerCase();
   const imageAnchor = document.getElementsByTagName("a");
 
   for (let i = 0; i < imageAnchor.length; i++) {
